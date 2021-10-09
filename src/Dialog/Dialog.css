@@ -1,0 +1,93 @@
+.overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.596);
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.Dialog {
+  position: fixed;
+  height: 300px;
+  width: 300px;
+  background-color: blanchedalmond;
+  z-index: 99;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 0.4rem 0.2rem rgba(0, 0, 0, 0.603);
+  transition: all 0.3s ease-in-out;
+}
+
+.errIcon {
+  font-size: 4rem;
+  text-align: center;
+  color: red;
+}
+
+.main {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.btn {
+  text-align: right;
+  margin: 0 1rem;
+}
+
+button {
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.ModelShow {
+  animation: ModelShowAnime 0.4s ease-out forwards;
+}
+
+@keyframes ModelShowAnime {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.ModelClosed {
+  animation: ModelClosedAnime 0.5s ease-out forwards;
+}
+
+@keyframes ModelClosedAnime {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+.fade-slide-enter-active {
+  animation: ModelShowAnime 0.4s ease-out forwards;
+}
+
+.fade-slide-exit-active {
+  animation: ModelClosedAnime 0.5s ease-out forwards;
+}
